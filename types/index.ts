@@ -15,6 +15,10 @@ export interface SearchManufacturerProps {
   setManufacturer: React.Dispatch<React.SetStateAction<string>>;
 }
 
+export interface HomePageSearchParams extends FilterProps {
+  limit: number;
+}
+
 export interface CarProps {
   city_mpg: number;
   class: string;
