@@ -11,7 +11,12 @@ export interface CustomButtonProps {
 }
 
 export interface SearchManufacturerProps {
-  manufacturer: string;
+  selected: string;
+  setSelected: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export interface SearchBarProps {
+  setModel: React.Dispatch<React.SetStateAction<string>>;
   setManufacturer: React.Dispatch<React.SetStateAction<string>>;
 }
 
@@ -56,9 +61,11 @@ export interface OptionProps {
 export interface CustomFilterProps {
   title: string;
   options: OptionProps[];
+  setFilter: React.Dispatch<React.SetStateAction<any>>;
 }
 
 export interface ShowMoreProps {
   pageNumber: number;
   isNext: boolean;
+  setLimit: React.Dispatch<React.SetStateAction<number>>;
 }
